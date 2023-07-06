@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel = "stylesheet" href ="../css/destino.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="shortcut icon" href="images/oryza-logo.png" />           <!--Completar-->
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Buscador de Recetas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Playball&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="container-fluid" id="header">
+          <nav class="navbar navbar-expand navbar-dark" id="navbar" >
+              <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                  <img src="../images/oryza-logo.png" width="30" height="30" alt="logo Oryza">
+                  ¿Qué comemos?
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Veamos qué tenemos hoy para cocinar</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#pasos">Receta</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#carrito">Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
+            <!-- Menú hamburguesa Smartphone---------->
+            <nav class="navbar navbar-expand navbar-dark" id="menuHamburguesa">
+              <div class="container-fluid">
+                  <a href="index.html">
+                    <img src="../images/oryza-logo-chico.png" width="40" height="40" alt="logo Oryza">
+                  </a>
+                  <p >¿Qué comemos?</p>
+                  <div class="dropdown show">
+                    <a class="btn btn-outline-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="../images/menu.png" id="logoHamburguesa" alt="logo Oryza">
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item descripcion" href="#pasos">Receta</a>
+                      <a class="dropdown-item descripcion" href="#carrito">Carrito</a>
+                      <a class="dropdown-item descripcion" href="#nosotros">Nosotros</a>
+                    </div>
+                  </div>
+              </div>
+              </nav>
+            <!-- Fin menu hamburguesa-------->
+
+    </header>
+    <div class="container-fluid ">
+        <div class=" row text-center justify-content-center ">
+            <div class="col-8">
+                
+                  <h1  class="titulo-ppal" >¡Armemos una receta!</h1>
+                    <p class="descripcion">Elige los ingredientes que tienes hoy en casa.</p>
+                    <p class="descripcion">Cuando termines, podrás seleccionar recetas que contengan al menos la mitad de los ingredientes que tienes. Y tendrás una lista de compras de tu supermercado más cercano para buscar lo que te falta.</p>
+            </div>
+            <div class="col-10">
+              <form action="" method="" >
+                  <fieldset>
+                    
+                          <legend class="pasos"> <span><img class="pizza" src="../images/pizza.jpg" alt="pizza"></span> Busca los ingredientes para tu receta:</legend>
+                          <label for="comensales" class="comensales">¿Para cuántos cocinarás?</label>
+                          <select name="" id="comensales">
+                            <option value="0">N° comensales</option>
+                          </select>
+                          <h4 class="descriptivo">Selecciona ingredientes:</h4>
+                          <div class="col-auto  ingredientesSeleccionar"></div>
+                          
+                  </fieldset>
+              </form>
+            </div>
+            <div class="col-10"> 
+              
+              <button id="yaTermine"  class="btnComprar" >Veamos qué comemos hoy</button>
+            </div>
+            <div class="text-center" id="spinner">
+              <div class="spinner-border text-info" style="width: 3rem; height: 3rem;" role="status" >
+              <span class="visually-hidden"></span>
+            </div>
+              Cargando
+            </div>
+            
+          <div class="row text-center justify-content-center procedimientoReceta">
+            <div class="col-10">
+                <h3 class="pasos" id="cantidadesNecesarias"></h3>
+                <div class=" col-auto cantidadesReceta"></div>
+            </div>
+            <div class="col-10 contenedor-receta">
+              <h3 class="pasos" id="pasos"> <img src="../images/pen.jpg" class="pluma" alt="pluma"> Paso a paso para realizar la pizza en casa:</h3>
+              <ul>
+                <li>
+                  <p class="procedimiento">  </p>
+                </li>
+                
+              </ul>
+            </div> 
+          </div>       
+        <div class="row text-center justify-content-center">
+            <div class="col-10">
+              <h2 class="descriptivo" id="carrito"></h2>
+            </div>
+            <div class="col-10 productosCarrito"></div>
+            <div class="col-10">
+              <button id="btnConfirmarCompra" class="col-auto btnComprar" >Confirmar pedido</button>
+            </div>
+            <div class="col-10" >
+              <div class="table-responsive">
+                <table class="table " id="tabla">
+                  <thead>
+                      <tr>
+                          <th class="articulo">Artículo</th>
+                          <th class="articulo">Marca</th>
+                          <th class="articulo">Contenido</th>
+                          <th class="articulo">Precio</th>
+                          <th class="articulo">Cantidad</th>
+                      </tr>
+                  </thead>
+                  <tbody id="contenedorCarrito">
+                    <!--Rellenado con la funcion mostrarCarritoFinal()-->
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+            <div class="col-10" id="precioTotal">
+            </div>
+            <div class="col-10">
+              <a href="comprar.html" target="_blank" id="btnRealizarPedido" class="btnComprar">Realizar Pedido </a>
+            </div>
+
+            
+        </div>
+
+        <div class="row justify-content-center">         
+            <div class="col-9 sectionNosotros">
+                <h2 class="tituloNosotros" id="nosotros">Nosotros</h2>
+                <p class="descripcion"> Facilitamos opciones interactivas para que te diviertas armando tu receta de forma dinámica y puedas comprar lo necesario para la cantidad de personas en la familia o amigos que queramos invitar. Al realizar la compra coordinaremos el envío de todos los ingredientes a tu hogar.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-4">
+                  <ul>
+                      <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.534979345408!2d-58.641893291525996!3d-34.651169218777305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb8aa7762bd43%3A0x3b271874eb632a7a!2sCastelar!5e0!3m2!1ses!2sar!4v1641934252790!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                  </ul>
+              </div>
+              <div class="col-lg-4">
+                  <ul>
+                    <li>Timbúes 2005, Castelar, Buenos Aires, Argentina</li>
+                    <li>hola@oryzatienda.com.ar</li>
+                    <li>Tel. 11-4444-5555</li>                      
+                  </ul>
+              </div>
+              <div class="col-lg-4">
+                  <ul>
+                    <li><div class="redesFooter" >
+                          <a href="https://www.facebook.com/" target="_blank"> <img src="images/facebook.png" alt="ícono Facebook"> </a>
+                          <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="ícono Instagram"></a>
+                        </div></li>
+                    <li>Suscribirme al newsletter</li>
+                    <li><a href="#header" id="subir">Subir</a></li>
+                  </ul>
+              </div>
+              
+        </div>
+      </div>
+      <div class="container-fluid  copyright">
+        <div class="row justify-content-center text-center">
+          <div class="col-12">
+            <p > &copy; 2022 Todos los Derechos Reservados  &reg; Oryza SRL</p>
+          </div>
+        </div>
+      </div>
+  </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>

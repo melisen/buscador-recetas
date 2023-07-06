@@ -1,0 +1,45 @@
+[
+{
+    "id": 14,
+    "nombreIngred": "Aceite de oliva",
+    "marca": "Biolive",
+    "pesoNeto1Porcion": 10,
+    "factorCorreccion": 1,
+    "GramosEnBolsa": 500,
+    "precioXBolsa": 930,
+    "foto": "../images/ingred/olive-oil.png",
+    "fotoProducto": "../images/productos/biolive.jpg"
+},
+{
+    "id": 15,
+    "nombreIngred": "Agua",
+    "marca": "",
+    "pesoNeto1Porcion": 65,
+    "factorCorreccion": 1,
+    "GramosEnBolsa": 1,
+    "precioXBolsa": 0,
+    "foto": "../images/ingred/water.png"
+},
+{
+    "id": 16,
+    "nombreIngred": "Premezcla",
+    "marca": "Kapac",
+    "pesoNeto1Porcion": 100,
+    "factorCorreccion": 1,
+    "GramosEnBolsa": 500,
+    "precioXBolsa": 337,
+    "foto": "../images/ingred/flour.png",
+    "fotoProducto": "../images/productos/premezcla.jpg"
+},
+{
+    "id": 17,
+    "nombreIngred": "Sal fina",
+    "marca": "Celusal",
+    "pesoNeto1Porcion": 1,
+    "factorCorreccion": 1,
+    "GramosEnBolsa": 500,
+    "precioXBolsa": 80,
+    "foto": "../images/ingred/salt-shaker.png",
+    "fotoProducto": "../images/productos/sal-fina.jpg"
+}    
+]

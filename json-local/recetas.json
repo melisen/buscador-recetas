@@ -1,0 +1,10 @@
+[
+    {
+        "categoria": "pizzas",
+        "titulo": "Pizza de cebolla",
+        "ingredientes": ["harina 0000", "agua", "sal fina", "salsa de tomate",  "mozzarella"],
+        "procedimiento": "Mezclar premezcla con la sal, formar una corona. En el medio volcar el agua tibia y el aceite de oliva. Amasar unos minutos hasta obtener una masa lisa y firme.  Dejar reposar 30 minutos. Aceitar las pizzeras. Dividir la masa en la cantidad de bollos necesarios para formar las pizzas. Estirar cada bollo sobre una pizzera. Dejar levar 2 hs. Anticipadamente prender horno fuerte (220°C). Hornear las pizzas 10 minutos aproximadamente (dependiento del horno hasta formar una prepizza). Desmoldar sobre rejilla metálica o tabla de madera. Dejar enfriar. Agregar los ingredientes escogidos para la cubierta, devolver al horno hasta calentar la pizza completa. Desmoldar la pizza caliente en una tabla de madera, cortar y servir.",
+        "tiempo-coccion": 30,
+        "tiempo-elaboracion": 60
+    }
+]
